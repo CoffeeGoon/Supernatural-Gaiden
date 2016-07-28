@@ -1,0 +1,36 @@
+
+
+
+var canvas;
+var player;
+var inventory;
+var object;
+var wall;
+var stage;
+canvas = document.getElementById("scene");
+stage = new createjs.Stage(canvas);
+player.images= new Array();
+player.images[0] =  new createjs.Bitmap("dean.png");b
+player.images[1] = new createjs.Bitmap("deanB.png");
+player.frame = 0;
+player.x = -300;
+player.y = -900;
+boundaries.left = -200;
+boundaries.right -1000;
+boundaries.up -100;
+boundaries.down = -1700;
+map = new createjs.Bitmap("map.png");
+stage.addChild(map);
+stage.addChild(player.images[0]);
+player.images[0].x = 535;
+player.images[0].y = 450;
+map.x = player.x;
+map.y = player.y;
+createjs.Ticker.addEventListener("tick", tick);
+
+
+function tick(){
+
+stage.update();
+
+}
